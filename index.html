@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>뭐 먹지?</title>
+		<title>경북대 점심, 뭐 먹지?</title>
 		<script data-ad-client="ca-pub-5536191614660236" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<style>
+		.center {
+			 text-align: center
+		}
+		.imgcenter{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+		</style>
 	</head>
-	<body><h1>뭐 먹지?</h1>
-	<h2>뭐 먹을지 정해줍니다</h2>
-	<h3>결과</h3>
-	<p id = 'food_name'></p>
-	<img id = 'myImg' src='http://bit.ly/RhrMEn'/>
+	<body><h1 class="center">경북대 점심, 뭐 먹지?</h1>
+	<center>
+	<form>
+	<input type="button" onClick="history.go(0)" value="다시 뽑기" >
+	</form>
+	</center>
+	<p id = 'food_name' class="center"></p>
+	<img id = 'myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
 	<script>
 		var foodnames = ['물','샌드위치']
 		var imgs = ['https://cdn.pixabay.com/photo/2017/04/24/11/18/drop-of-water-2256201_960_720.jpg',
