@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Result</title>
+		<title>뭐 먹지?</title>
 	</head>
-	<body><h1>YEAH SANDWICHES</h1>
-	<img src="http://bit.ly/RhrMEn" />
-		<p>I like eggs.</p>
-		<p>And ham!</p>
-		<p>But mostly sandwiches.</p>
-	<img id = "myImg" src="http://bit.ly/RhrMEn"/>
-	</body>
+	<body><h1>뭐 먹지?</h1>
+	<h2>뭐 먹을지 정해줍니다</h2>
+	<h3>결과</h3>
+	<p id = 'food_name'></p>
+	<img id = 'myImg' src='http://bit.ly/RhrMEn'/>
 	<script>
+		var foodnames = ['물','샌드위치']
 		var imgs = ['https://cdn.pixabay.com/photo/2017/04/24/11/18/drop-of-water-2256201_960_720.jpg',
 			    'http://bit.ly/RhrMEn'];
 		var img_cnt = imgs.length - 1;
@@ -18,5 +17,8 @@
 		
 		var img = document.getElementById("myImg");
 		img.setAttribute('src',imgs[rand_num]);
+		var foodname = document.getElementById('food_name');
+		foodname.innerHTML = foodnames[rand_num];
 	</script>
+	</body>
 </html>
