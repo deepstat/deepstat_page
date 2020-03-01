@@ -34,7 +34,8 @@
 				header: true,
 				complete: function(results) {
 					console.log("Parsing complete:", results.data);
-					callbackFunc(results.data);
+					var data = results.data;
+					callbackFunc(data);
 					}
 				}
 			);
