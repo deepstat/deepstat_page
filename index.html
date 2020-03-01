@@ -48,6 +48,10 @@
 			var foodname = document.getElementById('food_name');
 			foodname.innerHTML = csvdata[rand_num].foodnames;
 			var container = document.getElementById('map');
+			console.log(csvdata[rand_num].lat);
+			console.log(parseFloat(csvdata[rand_num].lat));
+			console.log(csvdata[rand_num].lon);
+			console.log(parseFloat(csvdata[rand_num].lon));
 			var options = {
 				center: new kakao.maps.LatLng(
 					parseFloat(csvdata[rand_num].lat),
