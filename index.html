@@ -24,9 +24,19 @@
 	<img id='myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
 	<center>
 	<div id="map" style="width:50%;height:300px;"></div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	</center>
+	<script src="PapaParse-5.0.2/papaparse.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
+		Papa.parse("data.csv", {
+			download: true,
+			step: function(row) {
+				console.log("Row:", row.data);
+			},
+			complete: function() {
+			console.log("All done!");
+			}
+		});
 		var foodnames = ['물','샌드위치']
 		var imgs = ['https://cdn.pixabay.com/photo/2017/04/24/11/18/drop-of-water-2256201_960_720.jpg',
 			    'http://bit.ly/RhrMEn'];
