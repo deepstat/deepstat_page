@@ -20,8 +20,8 @@
 	<input type="button" onClick="history.go(0)" value="다시 뽑기" >
 	</form>
 	</center>
-	<p id = 'food_name' class="center"></p>
-	<img id = 'myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
+	<p id='food_name' class="center"></p>
+	<img id='myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
 	<div id="map" style="width:50%;height:300px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
@@ -38,7 +38,7 @@
 		var foodname = document.getElementById('food_name');
 		foodname.innerHTML = foodnames[rand_num];
 
-		##
+		## kakao map
 		var container = document.getElementById('map');
 		var options = {
 			center: new kakao.maps.LatLng(lat[rand_num], long[rand_num]),
