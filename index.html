@@ -28,9 +28,12 @@
 	<script src="PapaParse-5.0.2/papaparse.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
-		var data = Papa.parse("https://raw.githubusercontent.com/deepstat/deepstat_page/master/data.csv", {
+		var data = Papa.parse("./data.csv", {
 			download: true,
-			header:true,
+			header: true,
+			step: function(row) {
+				console.log("Row:", row.data);
+			},
 			complete: function() {
 			console.log("All done!");
 			}
