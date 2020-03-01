@@ -29,6 +29,9 @@
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
 		var csvdata = [];
+		var map = {};
+		var img = {};
+		var foodname = {};
 		Papa.parse("data.csv", {
 			download: true,
 			header: true,
@@ -37,28 +40,20 @@
 			},
 			complete: function() {
 			console.log("All done!");
+			var img_cnt = csvdata.length;
+			var rand_num = Math.floor(Math.random() * (img_cnt));
+			var img = document.getElementById("myImg");
+			img.setAttribute('src',csvdata[rand_num].imgs);
+			var foodname = document.getElementById('food_name');
+			foodname.innerHTML = csvdata[rand_num].foodnames;
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
+				level: 3
+			};
+			var map = new kakao.maps.Map(container, options);
 			}
 		});
-		var img_cnt = 2;
-
-		var rand_num = Math.floor(Math.random() * (img_cnt));
-
-		console.log(rand_num);
-
-		var img = document.getElementById("myImg");
-
-		console.log(csvdata[rand_num].imgs);
-		img.setAttribute('src',csvdata[rand_num].imgs);
-		var foodname = document.getElementById('food_name');
-		foodname.innerHTML = csvdata[rand_num].foodnames;
-
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
-			level: 3
-		};
-
-		var map = new kakao.maps.Map(container, options);
 	</script>
 	</body>
 </html>
