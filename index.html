@@ -32,11 +32,7 @@
 		var img = document.getElementById("myImg");
 		var foodname = {};
 		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(0,0),
-			level: 3
-		};
-		var map = new kakao.maps.Map(container, options);
+		var map = {};
 		Papa.parse("data.csv", {
 			download: true,
 			header: true,
@@ -50,11 +46,8 @@
 			img.setAttribute('src',csvdata[rand_num].imgs);
 			foodname = document.getElementById('food_name');
 			foodname.innerHTML = csvdata[rand_num].foodnames;
-			options = {
-				center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
-				level: 3
-			};
-			map = new kakao.maps.Map(container, options);
+			map = new kakao.maps.Map(container, {center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
+				level: 3};);
 			}
 		});
 	</script>
