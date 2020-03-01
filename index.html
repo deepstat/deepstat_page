@@ -33,8 +33,9 @@
 				download: true,
 				header: true,
 				complete: function(results) {
-				console.log("All done!");
-				callbackFunc(results.data);
+					console.log("Parsing complete:", results);
+					console.log("All done!");
+					callbackFunc(results.data);
 					}
 				}
 			);
