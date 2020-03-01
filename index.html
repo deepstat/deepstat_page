@@ -41,7 +41,7 @@
 			complete: function() {
 			console.log("All done!");
 			var img_cnt = csvdata.length;
-			var rand_num = Math.floor(Math.random() * (img_cnt));
+			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
 			var img = document.getElementById("myImg");
 			img.setAttribute('src',csvdata[rand_num].imgs);
 			var foodname = document.getElementById('food_name');
