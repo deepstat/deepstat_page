@@ -34,15 +34,13 @@
 				header: true,
 				complete: function(results) {
 					console.log("Parsing complete:", results.data);
-					var data = results.data;
-					callbackFunc(data);
+					callbackFunc(results.data);
 					}
 				}
 			);
 		};
 
 		getData( function(csvdata){
-			var csvdata=results.data
 			var img_cnt = csvdata.length;
 			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
 			var img = document.getElementById("myImg");
