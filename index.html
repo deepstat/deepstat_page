@@ -47,6 +47,8 @@
 		console.log(rand_num);
 
 		var img = document.getElementById("myImg");
+
+		console.log(csvdata[rand_num].imgs);
 		img.setAttribute('src',csvdata[rand_num].imgs);
 		var foodname = document.getElementById('food_name');
 		foodname.innerHTML = csvdata[rand_num].foodnames;
