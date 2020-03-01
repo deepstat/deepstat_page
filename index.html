@@ -22,7 +22,7 @@
 	</center>
 	<p id='food_name' class="center"></p>
 	<img id='myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
-	<div id="map" style="width:500px;height:300px;"></div>
+	<div id="map" style="width:50%;height:300px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
 		var foodnames = ['물','샌드위치']
@@ -31,17 +31,16 @@
 		var img_cnt = imgs.length - 1;
 		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
 		var lat = [33.450701,34.450701];
-		var long = [126.570667,127.570667];
+		var lon = [126.570667,127.570667];
 		
 		var img = document.getElementById("myImg");
 		img.setAttribute('src',imgs[rand_num]);
 		var foodname = document.getElementById('food_name');
 		foodname.innerHTML = foodnames[rand_num];
 
-		## kakao map
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			center: new kakao.maps.LatLng(lat[rand_num], lon[rand_num]),
 			level: 3
 		};
 
