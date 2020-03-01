@@ -45,16 +45,16 @@
 			},
 			complete: function() {
 			console.log("All done!");
-			var img_cnt = csvdata.length;
-			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
+			img_cnt = csvdata.length;
+			rand_num = Math.floor(Math.random() * (img_cnt - 1));
 			img.setAttribute('src',csvdata[rand_num].imgs);
-			var foodname = document.getElementById('food_name');
+			foodname = document.getElementById('food_name');
 			foodname.innerHTML = csvdata[rand_num].foodnames;
-			var options = {
+			options = {
 				center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
 				level: 3
 			};
-			var map = new kakao.maps.Map(container, options);
+			map = new kakao.maps.Map(container, options);
 			}
 		});
 	</script>
