@@ -28,7 +28,7 @@
 	<script src="PapaParse-5.0.2/papaparse.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
-		var data = Papa.parse("data.csv", {
+		var data = Papa.parse("https://raw.githubusercontent.com/deepstat/deepstat_page/master/data.csv", {
 			download: true,
 			header:true,
 			complete: function() {
@@ -36,14 +36,19 @@
 			}
 		});
 		console.log(data)
-		var foodnames = ['물','샌드위치']
-		var imgs = ['https://cdn.pixabay.com/photo/2017/04/24/11/18/drop-of-water-2256201_960_720.jpg',
-			    'http://bit.ly/RhrMEn'];
-		var img_cnt = imgs.length - 1;
-		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
-		var lat = [33.450701,33.460701];
-		var lon = [126.570667,126.580667];
-		
+//		var foodnames = ['물','샌드위치']
+//		var imgs = ['https://cdn.pixabay.com/photo/2017/04/24/11/18/drop-of-water-2256201_960_720.jpg',
+//			    'http://bit.ly/RhrMEn'];
+//		var img_cnt = imgs.length - 1;
+
+
+
+//		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
+//		var lat = [33.450701,33.460701];
+//		var lon = [126.570667,126.580667];
+//		
+
+
 		var img = document.getElementById("myImg");
 		img.setAttribute('src',imgs[rand_num]);
 		var foodname = document.getElementById('food_name');
