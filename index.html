@@ -29,18 +29,19 @@
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
 		function getData(callbackFunc){
-		var csvdata=[];
-		Papa.parse("data.csv", {
-			download: true,
-			header: true,
-			step: function(row) {
-				csvdata.push(row.data);
-			},
-			complete: function() {
-			console.log("All done!");
-			callbackFunc(csvData);
-			}
-		});
+			var csvdata=[];
+			Papa.parse("data.csv", {
+				download: true,
+				header: true,
+				step: function(row) {
+					csvdata.push(row.data);
+				},
+				complete: function() {
+				console.log("All done!");
+				callbackFunc(csvData);
+				}
+			});
+		};
 		
 		getData( function(csvdata) {
 			var img_cnt = csvdata.length;
