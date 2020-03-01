@@ -33,7 +33,8 @@
 		var foodname = {};
 		var rand_num = 0;
 		var container = document.getElementById('map');
-		var map = {};
+		var map = new kakao.maps.Map(container, {center: new kakao.maps.LatLng(35.888836,128.6102997),
+				level: 3});
 		Papa.parse("data.csv", {
 			download: true,
 			header: true,
