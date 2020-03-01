@@ -44,13 +44,13 @@
 		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
 
 		var img = document.getElementById("myImg");
-		img.setAttribute('src',csvdata[rand_num]["imgs"]);
+		img.setAttribute('src',csvdata[rand_num].imgs);
 		var foodname = document.getElementById('food_name');
-		foodname.innerHTML = csvdata[rand_num]["foodnames"];
+		foodname.innerHTML = csvdata[rand_num].foodnames;
 
 		var container = document.getElementById('map');
 		var options = {
-			center: new kakao.maps.LatLng(csvdata[rand_num]["lat"], csvdata[rand_num]["lon"]),
+			center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
 			level: 3
 		};
 
