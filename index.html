@@ -34,22 +34,27 @@
 				header: true,
 				complete: function(results) {
 				console.log("All done!");
-				var csvdata=results.data
-				var img_cnt = csvdata.length;
-				var rand_num = Math.floor(Math.random() * (img_cnt - 1));
-				var img = document.getElementById("myImg");
-				img.setAttribute('src',csvdata[rand_num].imgs);
-				var foodname = document.getElementById('food_name');
-				foodname.innerHTML = csvdata[rand_num].foodnames;
-				var container = document.getElementById('map');
-				var options = {
-					center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
-					 level: 3
-				};
-				var map = new kakao.maps.Map(container, options);
+				callbackFunc(results.data);
 					}
-			});
+				}
+			);
 		};
+
+		getData( function(csvdata){
+			var csvdata=results.data
+			var img_cnt = csvdata.length;
+			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
+			var img = document.getElementById("myImg");
+			img.setAttribute('src',csvdata[rand_num].imgs);
+			var foodname = document.getElementById('food_name');
+			foodname.innerHTML = csvdata[rand_num].foodnames;
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(csvdata[rand_num].lat, csvdata[rand_num].lon),
+				 level: 3
+			};
+			var map = new kakao.maps.Map(container, options);
+		});
 	</script>
 	</body>
 </html>
