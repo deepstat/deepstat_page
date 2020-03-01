@@ -11,7 +11,7 @@
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			width: 70%;
+			width: 70%;}
 		</style>
 	</head>
 	<body><h1 class="center">경북대 점심, 뭐 먹지?</h1>
@@ -39,10 +39,9 @@
 			console.log("All done!");
 			}
 		});
-		console.log(csvdata);
 		var img_cnt = csvdata.length;
 
-		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
+		var rand_num = Math.floor(Math.random() * (img_cnt - 1));
 
 		console.log(rand_num);
 
