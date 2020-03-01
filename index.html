@@ -39,9 +39,12 @@
 			console.log("All done!");
 			}
 		});
+		console.log(csvdata);
 		var img_cnt = csvdata.length;
 
 		var rand_num = Math.floor(Math.random() * (img_cnt - 0 + 1));
+
+		console.log(rand_num);
 
 		var img = document.getElementById("myImg");
 		img.setAttribute('src',csvdata[rand_num].imgs);
