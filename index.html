@@ -45,11 +45,8 @@
 			img.setAttribute('src',csvdata[rand_num].imgs);
 			var foodname = document.getElementById('food_name');
 			foodname.innerHTML = csvdata[rand_num].foodnames;
+
 			var container = document.getElementById('map');
-			console.log(csvdata[rand_num].lat);
-			console.log(parseFloat(csvdata[rand_num].lat));
-			console.log(csvdata[rand_num].lon);
-			console.log(parseFloat(csvdata[rand_num].lon));
 			var options = {
 				center: new kakao.maps.LatLng(
 					parseFloat(csvdata[rand_num].lat),
@@ -57,6 +54,13 @@
 				 level: 3
 			};
 			var map = new kakao.maps.Map(container, options);
+			var markerPosition  = new kakao.maps.LatLng(
+					parseFloat(csvdata[rand_num].lat),
+					parseFloat(csvdata[rand_num].lon));
+			var marker = new kakao.maps.Marker({
+				position: markerPosition
+			});
+			marker.setMap(map);
 		});
 	</script>
 	</body>
