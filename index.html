@@ -14,16 +14,14 @@
 			width: 100%;}
 		</style>
 	</head>
-	<body><h1 class="center">경북대 점심, 뭐 먹지?</h1>
-	<center>
-	<form>
-	<input type="button" onClick="history.go(0)" value="다시 뽑기" >
-	</form>
-	</center>
-	<p id='food_name' class="center"></p>
+	<body>
 	<img id='myImg' src='http://bit.ly/RhrMEn' class="imgcenter">
+	<p id='food_name' class="center" style="font-size:2.5em;"></p>
 	<center>
 	<div id="map" style="width:100%;height:400px;"></div>
+	<form>
+	<input type="button" onClick="history.go(0)" value="다시 뽑기" style="font-size:3em; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);">
+	</form>
 	</center>
 	<script src="PapaParse-5.0.2/papaparse.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
