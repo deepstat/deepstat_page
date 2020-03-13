@@ -4,6 +4,11 @@ html, body{
 .center {
 	 text-align: center;
 }
+#food_div{
+	width:45vw;
+	height:95vw;
+	float:left;
+}
 #myImg{
 	width: 45vw;
 	height: 70vh;
@@ -17,7 +22,7 @@ html, body{
 #img_div{
 	width:45vw;
 	height:70vh;
-	float:left;
+	float:center;
 }
 #food_name_div{
 	width: 45vw;
