@@ -1,0 +1,32 @@
+html, body{
+	height: 100%;
+}
+.center {
+	 text-align: center;
+}
+#myImg{
+	width: 95vw;
+	height: 45vh;
+	float: center;
+}
+#map{
+	width: 95vw;
+	height: 30vh;
+	float: center;
+}
+#img_div{
+	width:95vw;
+	height:45vh;
+}
+#food_name_div{
+	width: 95vw;
+	height: 10vh;
+}
+#map_div{
+	width:95vw;
+	height:30vh;
+}
+#button_div{
+	width:95vw;
+	height:5vh;
+}
