@@ -17,6 +17,7 @@ html, body{
 #img_div{
 	width:45vw;
 	height:70vh;
+	float:left;
 }
 #food_name_div{
 	width: 45vw;
@@ -25,8 +26,10 @@ html, body{
 #map_div{
 	width:45vw;
 	height:95vh;
+	float:right;
 }
 #button_div{
 	width:95vw;
 	height:5vh;
+	clear: both;
 }
