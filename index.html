@@ -4,7 +4,7 @@
 		<title>경북대 점심, 뭐 먹지?</title>
 		<link rel="stylesheet" type="text/css" href="./my_css_pc.css">
 		<link rel="stylesheet" type="text/css" media="(max-aspect-ratio:1/1)"href="./my_css_mobile.css">
-		<script data-ad-client="ca-pub-5536191614660236" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 	</head>
 	<body>
 	<div id="food_div">
@@ -23,10 +23,17 @@
 		</form>
 		</center>
 	</div>
+	<amp-ad
+		layout="fixed"
+		width="728"
+		height="90"
+		type="adsense"
+		data-ad-client="ca-pub-5536191614660236"
+		data-ad-slot="6180812541">
+	</amp-ad>
 
 	<script src="PapaParse-5.0.2/papaparse.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
 		function getData(callbackFunc){
 			Papa.parse("data.csv", {
@@ -63,13 +70,6 @@
 			});
 			marker.setMap(map);
 		});
-
-		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-	<!-- 광고_1_728X90 -->
-	<ins class="adsbygoogle"
-		style="display:inline-block;width:728px;height:90px"
-		data-ad-client="ca-pub-5536191614660236"
-		data-ad-slot="6180812541"></ins>
 	</body>
 </html>
