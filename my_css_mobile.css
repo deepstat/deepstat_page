@@ -26,6 +26,7 @@ html, body{
 #food_name_div{
 	width: 95vw;
 	height: 10vh;
+	float: center;
 }
 #map_div{
 	width:95vw;
