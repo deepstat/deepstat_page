@@ -1,12 +1,9 @@
-html, body{
-	height: 100%;
-}
 .center {
 	 text-align: center;
 }
 #food_div{
 	width: 95vw;
-	height: 75vh;
+	height: 60vh;
 	float: center;
 }
 #myImg{
