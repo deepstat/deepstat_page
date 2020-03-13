@@ -6,7 +6,7 @@ html, body{
 }
 #food_div{
 	width:45vw;
-	height:95vw;
+	height:90vw;
 	float:left;
 }
 #myImg{
@@ -16,7 +16,7 @@ html, body{
 }
 #map{
 	width: 45vw;
-	height: 95vh;
+	height: 90vh;
 	float: center;
 }
 #img_div{
@@ -26,7 +26,7 @@ html, body{
 }
 #map_div{
 	width:45vw;
-	height:95vh;
+	height:90vh;
 	float:right;
 }
 #button_div{
