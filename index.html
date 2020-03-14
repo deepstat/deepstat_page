@@ -49,6 +49,12 @@
 	<script src="PapaParse-5.0.2/papaparse.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
+		function getUrlParams() {
+			var params = {};
+			window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+			return params;
+		}
+
 		function getData(callbackFunc){
 			Papa.parse("data.csv", {
 				download: true,
