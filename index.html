@@ -7,19 +7,16 @@
 		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 	</head>
 	<body>
+	<form method="get" action="./">
 	<div id="gate_div" style="display:flex">
 	    	<div class="gate">
 		</div>
 		<div class="gate">
-			<form method="get" action="./">
-				<input type="checkbox" name="north_gate" id="north_gate" style="float:right;" value="TRUE" checked></input>
-			</form>
+			<input type="checkbox" name="north_gate" id="north_gate" style="float:right;" value="TRUE" checked></input>
 			<label for="north_gate">북문근처</label>
 		</div>
 		<div class="gate">
-			<form method="get" action="./">
-				<input type="checkbox" name="main_gate" id="main_gate" style="float:right;" value="TRUE" checked></input>
-			</form>
+			<input type="checkbox" name="main_gate" id="main_gate" style="float:right;" value="TRUE" checked></input>
 			<label for="main_gate">정문근처</label>
 		</div>
 	</div>
@@ -39,6 +36,7 @@
 		</form>
 		</center>
 	</div>
+	</form>
 	<amp-ad
 		layout="fixed"
 		width="728"
