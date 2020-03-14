@@ -85,6 +85,7 @@
 		};
 
 		getData( function(csvdata){
+			csvdata = csvdata.filter(d => d.north_gate === my_params.north_gate && d.main_gate === my_params.main_gate);
 			var img_cnt = csvdata.length;
 			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
 			var img = document.getElementById("myImg");
