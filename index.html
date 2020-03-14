@@ -7,11 +7,17 @@
 		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 	</head>
 	<body>
-	<div id="gate_div">
-		<input type="checkbox" name="gate" id="north_gate"></input>
-		<label for="north_gate">북문근처</label>
-		<input type="checkbox" name="gate" id="main_gate"></input>
-		<label for="main_gate">정문근처</label>
+	<div id="gate_div" style="display:flex">
+	    	<div class="gate">
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="gate" id="north_gate" checked></input>
+			<label for="north_gate"  style="float:right;">북문근처</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="gate" id="main_gate" checked></input>
+			<label for="main_gate" style="float:right;">정문근처</label>
+		</div>
 	</div>
 	<div id="food_div">
 		<div id="img_div">

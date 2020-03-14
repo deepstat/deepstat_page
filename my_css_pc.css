@@ -9,17 +9,14 @@
 #myImg{
 	width: 45vw;
 	height: 65vh;
-	float: center;
 }
 #map{
 	width: 45vw;
 	height: 75vh;
-	float: center;
 }
 #img_div{
 	width:45vw;
 	height:65vh;
-	float:center;
 }
 #map_div{
 	width:45vw;
@@ -34,21 +31,20 @@
 #gate_div {
 	width:95vw;
 	height:5vh;
-	float:center;
 }
 #gate_div input{
-  display: none;
+	display: none;
+}
+.gate {
+	width: 25%;
 }
 label {
-  width: 25vw;
-  height: 5vw;
-  text-align: center;
-  border: 1px solid #999;
-  line-height: 5vh;
-  font-size: 4vmin;
+	text-align: center;
+	border: 1px solid #999;
+	font-size: 4vmin;
 }
 #north_gate:checked ~ label[for="north_gate"],
 #main_gate:checked ~ label[for="main_gate"] {
-  background: #999;
-  color: #fff;
+	background: #999;
+	color: #fff;
 }

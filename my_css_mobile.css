@@ -4,17 +4,14 @@
 #food_div{
 	width: 95vw;
 	height: 50vh;
-	float: center;
 }
 #myImg{
 	width: 95vw;
 	height: 40vh;
-	float: center;
 }
 #map{
 	width: 95vw;
 	height: 30vh;
-	float: center;
 }
 #img_div{
 	width:95vw;
@@ -31,21 +28,21 @@
 #gate_div {
 	width:95vw;
 	height:5vh;
-	float:center;
+	float:right;
+}
+.gate {
+	width: 25%;
 }
 #gate_div input{
   display: none;
 }
 label {
-  width: 25vw;
-  height: 5vw;
-  text-align: center;
-  border: 1px solid #999;
-  line-height: 5vh;
-  font-size: 4vmin;
+	text-align: center;
+	border: 1px solid #999;
+	font-size: 4vmin;
 }
 #north_gate:checked ~ label[for="north_gate"],
 #main_gate:checked ~ label[for="main_gate"] {
-  background: #999;
-  color: #fff;
+	background: #999;
+	color: #fff;
 }
