@@ -66,6 +66,14 @@
 			my_params.main_gate="TRUE";
 			document.querySelector('input[name=main_gate]').checked = 0;
 		};
+		
+		if (my_params.north_gate == "FALSE") {
+			document.querySelector('input[name=north_gate]').checked = 1;
+		}
+
+		if (my_params.main_gate == "FALSE") {
+			document.querySelector('input[name=main_gate]').checked = 1;
+		}
 
 		function getData(callbackFunc){
 			Papa.parse("data.csv", {
