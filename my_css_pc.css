@@ -40,11 +40,13 @@
 }
 label {
 	text-align: center;
-	border: 1px solid #999;
+	background: #999;
+	color: #fff;
 	font-size: 4vmin;
 }
 #north_gate:checked ~ label[for="north_gate"],
 #main_gate:checked ~ label[for="main_gate"] {
-	background: #999;
-	color: #fff;
+	background: #fff;
+	color: #999;
+	border: 1px solid #999;
 }
