@@ -3,31 +3,52 @@
 }
 #food_div{
 	width:45vw;
-	height:85vh;
+	height:80vh;
 	float:left;
 }
 #myImg{
 	width: 45vw;
-	height: 70vh;
+	height: 65vh;
 	float: center;
 }
 #map{
 	width: 45vw;
-	height: 80vh;
+	height: 75vh;
 	float: center;
 }
 #img_div{
 	width:45vw;
-	height:70vh;
+	height:65vh;
 	float:center;
 }
 #map_div{
 	width:45vw;
-	height:80vh;
+	height:75vh;
 	float:right;
 }
 #button_div{
 	width:95vw;
 	height:5vh;
 	clear: both;
+}
+#gate_div {
+	width:95vw;
+	height:5vh;
+	float:center;
+}
+#gate_div input{
+  display: none;
+}
+label {
+  width: 25vw;
+  height: 5vw;
+  text-align: center;
+  border: 1px solid #999;
+  line-height: 5vh;
+  font-size: 4vmin;
+}
+#north_gate:checked ~ label[for="north_gate"],
+#main_gate:checked ~ label[for="main_gate"] {
+  background: #999;
+  color: #fff;
 }
