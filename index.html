@@ -55,6 +55,18 @@
 			return params;
 		}
 
+		var my_params=getUrlParams()
+
+		if (typeof my_params.north_gate === "undefined"){
+			my_params.north_gate="FALSE"
+			document.querySelector('input[name=north_gate]').checked=0
+		}
+
+		if (typeof my_params.main_gate === "undefined"){
+			my_params.main_gate="FALSE"
+			document.querySelector('input[name=main_gate]').checked=0
+		}
+
 		function getData(callbackFunc){
 			Papa.parse("data.csv", {
 				download: true,
