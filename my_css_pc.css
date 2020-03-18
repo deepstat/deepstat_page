@@ -44,12 +44,12 @@ label {
 	color: #fff;
 	font-size: 4vmin;
 }
-#north_gate:checked ~ label[for="north"],
-#main_gate:checked ~ label[for="west"], 
-#main_gate:checked ~ label[for="side"],
-#main_gate:checked ~ label[for="main"],
-#main_gate:checked ~ label[for="east"],
-#main_gate:checked ~ label[for="tech"]{
+#north:checked ~ label[for="north"],
+#west:checked ~ label[for="west"], 
+#side:checked ~ label[for="side"],
+#main:checked ~ label[for="main"],
+#east:checked ~ label[for="east"],
+#tech:checked ~ label[for="tech"]{
 	background: #fff;
 	color: #999;
 	border: 1px solid #999;
