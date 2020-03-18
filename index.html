@@ -132,7 +132,7 @@
 		};
 
 		getData( function(csvdata){
-			csvdata = csvdata.filter( d => (d.north === "TRUE" && my_params.north === "TRUE") || (d.west === "TRUE" && my_params.west === "TRUE") || (d.side === "TRUE" && my_params.side === "TRUE") || (d.main === "TRUE" && my_params.main === "TRUE") || (d.east === "TRUE" && my_params.east === "TRUE") || (d.tech === "TRUE" && my_params.tech === "TRUE");
+			csvdata = csvdata.filter( d => (d.north === "TRUE" && my_params.north === "TRUE") || (d.west === "TRUE" && my_params.west === "TRUE") || (d.side === "TRUE" && my_params.side === "TRUE") || (d.main === "TRUE" && my_params.main === "TRUE") || (d.east === "TRUE" && my_params.east === "TRUE") || (d.tech === "TRUE" && my_params.tech === "TRUE"));
 			var img_cnt = csvdata.length;
 			var rand_num = Math.floor(Math.random() * (img_cnt - 1));
 			var img = document.getElementById("myImg");
