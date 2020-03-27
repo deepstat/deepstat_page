@@ -1,4 +1,4 @@
-﻿foodnames,imgs,lat,lon,picture_existence,north,west,side,main,east,tech
+foodnames,imgs,lat,lon,picture_existence,north,west,side,main,east,tech
 "볶음짜장 2인 (황금성) / 10,000원",https://mblogthumb-phinf.pstatic.net/MjAxODAzMjdfMjEw/MDAxNTIyMTA4MDQ5MTY0.dywtFICTJU4tDDqSZGU2grUz3P4CFvWTXc-fIG_S1rMg.1VkOIhhNggtk2ccrULFKWjA4RljohJP25HBRL7qypkQg.JPEG.momo-66/20180326_192905.jpg?type=w800,35.8920088,128.6154324,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 "짬뽕 (황금성) / 4,000원",https://mblogthumb-phinf.pstatic.net/MjAxODAzMjdfMjE3/MDAxNTIyMTA4MDQ2NTM2.5Wpgf4mjc-ukSDo2AG3cl6bcQ7Op-3gMkaiqik1_xlkg.zC3G4Flq803zp1q7FIyRdLW9Z6owUOWqXA4XdCO3PCYg.JPEG.momo-66/20180326_192832.jpg?type=w800,35.8920088,128.6154324,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 "깐풍육 미니 (황금성) / 9,000원",https://mblogthumb-phinf.pstatic.net/MjAxODAzMjdfMTk2/MDAxNTIyMTA4MDUxNDE3.9mODDLHvkvMSV9ZqagTxFMB8cE5KEsWRy6Okp-z6Seog.MysxujgWI5ir2EU3v4pvdJeY6v9N5MZXuGNHeQ-ZkVog.JPEG.momo-66/20180326_193124.jpg?type=w800,35.8920088,128.6154324,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
@@ -33,3 +33,6 @@
 "꼬깔면탕 (왕추찜닭) / 7,000원",images/꼬깔면탕_왕추찜닭.jpg,35.8880607,128.603247,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
 "중화비밤밥 (기황후) / 6,000원",images/중화비빔밥_기황후.jpg,35.88967,128.6177027,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 "크림찜닭(반마리) (봉대박찜닭) / 22,000원",images/크림찜닭_봉대박.jpg,35.8945114,128.6100385,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+"피자돈까스 (돈가스백작) / 7,500",images/피자돈가스_돈가스백작.jpg,35.8849473,128.6100814,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"수제흑돼지돈까스 (모이다식탁) /7,000원",images/수제흑돼지돈까스_모이다식탁.jpg,35.8847813,128.6136587,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+"고기볶음2인 (우리분식) / 10,000원 (1인분 5,000원)",images/고기볶음_우리분식.jpg,35.8849872,128.6098802,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
