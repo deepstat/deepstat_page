@@ -40,8 +40,9 @@
 }
 label {
 	text-align: center;
-	background: #999;
+	background: #55b4ff;
 	color: #fff;
+	border: 1px solid #55b4ff;
 	font-size: 4vmin;
 }
 #north:checked ~ label[for="north"],
@@ -50,7 +51,7 @@ label {
 #main:checked ~ label[for="main"],
 #east:checked ~ label[for="east"],
 #tech:checked ~ label[for="tech"]{
-	background: #fff;
-	color: #999;
-	border: 1px solid #999;
+	background: #ccc;
+	color: #fff;
+	border: 1px solid #ccc;
 }
