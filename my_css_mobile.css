@@ -2,31 +2,31 @@
 	 text-align: center;
 }
 #food_div{
-	width: 95vw;
+	width: 100vw;
 	height: 50vh;
 }
 #myImg{
-	width: 95vw;
+	width: 100vw;
 	height: 40vh;
 }
 #map{
-	width: 95vw;
+	width: 100vw;
 	height: 30vh;
 }
 #img_div{
-	width:95vw;
+	width:100vw;
 	height:40vh;
 }
 #map_div{
-	width:95vw;
+	width:100vw;
 	height:30vh;
 }
 #button_div{
-	width:95vw;
+	width:100vw;
 	height:5vh;
 }
 #gate_div {
-	width:95vw;
+	width:100vw;
 	height:5vh;
 	float:right;
 }
