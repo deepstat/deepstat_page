@@ -5,21 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>크누점심</title>
-		<link rel="stylesheet" type="text/css" href="./my_css_pc.css" />
-		<link rel="stylesheet" type="text/css" media="(max-aspect-ratio:1/1)"href="./my_css_mobile.css" />
-		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="./index_my_css_pc.css" />
+		<link rel="stylesheet" type="text/css" media="(max-aspect-ratio:1/1)"href="./index_my_css_mobile.css" />
 	</head>
 	<body>
-	<form method="get" action="./">
+	<form method="get" action="./lunch/lunch.html">
 	<div id="button_div"></div>
 	<div id="gate_div" style="display:flex">
 	    	<div class="gate">
-		</div>
-	    	<div class="gate">
-		</div>
-	    	<div class="gate">
-		</div>
-    		<div class="gate">
 		</div>
 		<div class="gate">
 			<input type="checkbox" name="north" id="north" style="float:right;" value="FALSE"></input>
@@ -32,6 +25,11 @@
 		<div class="gate">
 			<input type="checkbox" name="side" id="side" style="float:right;" value="FALSE"></input>
 			<label for="side">쪽문</label>
+		</div>
+	</div>
+	<div id="button_div"></div>
+	<div id="gate_div" style="display:flex">
+	    	<div class="gate">
 		</div>
 		<div class="gate">
 			<input type="checkbox" name="main" id="main" style="float:right;" value="FALSE"></input>
@@ -46,34 +44,16 @@
 			<label for="tech">텤문</label>
 		</div>
 	</div>
-	<div id="food_div">
-		<div id="img_div">
-			<img id='myImg'>
-		</div>
-		<p id='food_name' class="center" style="font-size:4vmin;"></p>
-	</div>
-	<div id="map_div">
-		<div id="map"></div>
-	</div>
+	<div id="button_div"></div>
 	<div id="button_div">
 		<center>
 		<form>
-			<input type="submit" value="다시 뽑기" style="font-size:4vmin; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);">
+			<input type="submit" value="점심 뽑기" style="font-size:4vmin; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);">
 		</form>
 		</center>
 	</div>
 	</form>
-	<amp-ad
-		layout="fixed"
-		width="728"
-		height="90"
-		type="adsense"
-		data-ad-client="ca-pub-5536191614660236"
-		data-ad-slot="6180812541">
-	</amp-ad>
 
-	<script src="PapaParse-5.0.2/papaparse.js"></script>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
 	<script>
 		function getUrlParams() {
 			var params = {};
@@ -120,43 +100,6 @@
 		if (my_params.tech == "FALSE") {
 			document.querySelector('input[name=tech]').checked = 1;
 		};
-
-		function getData(callbackFunc){
-			Papa.parse("data.csv", {
-				download: true,
-				header: true,
-				complete: function(results) {
-					callbackFunc(results.data);
-					}
-				}
-			);
-		};
-
-		getData( function(csvdata){
-			csvdata = csvdata.filter( d => (d.north === "TRUE" && my_params.north === "TRUE") || (d.west === "TRUE" && my_params.west === "TRUE") || (d.side === "TRUE" && my_params.side === "TRUE") || (d.main === "TRUE" && my_params.main === "TRUE") || (d.east === "TRUE" && my_params.east === "TRUE") || (d.tech === "TRUE" && my_params.tech === "TRUE"));
-			var img_cnt = csvdata.length;
-			var rand_num = Math.floor(Math.random() * (img_cnt));
-			var img = document.getElementById("myImg");
-			img.setAttribute('src',csvdata[rand_num].imgs);
-			var foodname = document.getElementById('food_name');
-			foodname.innerHTML = csvdata[rand_num].foodnames;
-
-			var container = document.getElementById('map');
-			var options = {
-				center: new kakao.maps.LatLng(
-					parseFloat(csvdata[rand_num].lat),
-					parseFloat(csvdata[rand_num].lon)),
-				 level: 3
-			};
-			var map = new kakao.maps.Map(container, options);
-			var markerPosition  = new kakao.maps.LatLng(
-					parseFloat(csvdata[rand_num].lat),
-					parseFloat(csvdata[rand_num].lon));
-			var marker = new kakao.maps.Marker({
-				position: markerPosition
-			});
-			marker.setMap(map);
-		});
 	</script>
 
 	<a href="./privacy_policy.html" style="text-align: right; color: gray; font-size: 0.3em">개인정보처리방침</a>

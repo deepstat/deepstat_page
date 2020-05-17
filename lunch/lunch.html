@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>크누점심</title>
+		<link rel="stylesheet" type="text/css" href="./my_css_pc.css" />
+		<link rel="stylesheet" type="text/css" media="(max-aspect-ratio:1/1)"href="./my_css_mobile.css" />
+		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+	</head>
+	<body>
+	<form method="get" action="./">
+	<div id="button_div"></div>
+	<div id="gate_div" style="display:flex">
+	    	<div class="gate">
+		</div>
+	    	<div class="gate">
+		</div>
+	    	<div class="gate">
+		</div>
+    		<div class="gate">
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="north" id="north" style="float:right;" value="FALSE"></input>
+			<label for="north">북문</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="west" id="west" style="float:right;" value="FALSE"></input>
+			<label for="west">서문</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="side" id="side" style="float:right;" value="FALSE"></input>
+			<label for="side">쪽문</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="main" id="main" style="float:right;" value="FALSE"></input>
+			<label for="main">정문</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="east" id="east" style="float:right;" value="FALSE"></input>
+			<label for="east">동문</label>
+		</div>
+		<div class="gate">
+			<input type="checkbox" name="tech" id="tech" style="float:right;" value="FALSE"></input>
+			<label for="tech">텤문</label>
+		</div>
+	</div>
+	<div id="food_div">
+		<div id="img_div">
+			<img id='myImg'>
+		</div>
+		<p id='food_name' class="center" style="font-size:4vmin;"></p>
+	</div>
+	<div id="map_div">
+		<div id="map"></div>
+	</div>
+	<div id="button_div">
+		<center>
+		<form>
+			<input type="submit" value="다시 뽑기" style="font-size:4vmin; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);">
+		</form>
+		</center>
+	</div>
+	</form>
+	<amp-ad
+		layout="fixed"
+		width="728"
+		height="90"
+		type="adsense"
+		data-ad-client="ca-pub-5536191614660236"
+		data-ad-slot="6180812541">
+	</amp-ad>
+
+	<script src="../PapaParse-5.0.2/papaparse.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=488b379934773e65aefc9613887e9c91"></script>
+	<script>
+		function getUrlParams() {
+			var params = {};
+			window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+			return params;
+		};
+
+		var my_params=getUrlParams()
+
+		if (typeof my_params.north === "undefined"){
+			my_params.north="TRUE";
+		};
+		if (typeof my_params.west === "undefined"){
+			my_params.west="TRUE";
+		};
+		if (typeof my_params.side === "undefined"){
+			my_params.side="TRUE";
+		};
+		if (typeof my_params.main === "undefined"){
+			my_params.main="TRUE";
+		};
+		if (typeof my_params.east === "undefined"){
+			my_params.east="TRUE";
+		};
+		if (typeof my_params.tech === "undefined"){
+			my_params.tech="TRUE";
+		};
+
+		if (my_params.north == "FALSE") {
+			document.querySelector('input[name=north]').checked = 1;
+		};
+		if (my_params.west == "FALSE") {
+			document.querySelector('input[name=west]').checked = 1;
+		};
+		if (my_params.side == "FALSE") {
+			document.querySelector('input[name=side]').checked = 1;
+		};
+		if (my_params.main == "FALSE") {
+			document.querySelector('input[name=main]').checked = 1;
+		};
+		if (my_params.east == "FALSE") {
+			document.querySelector('input[name=east]').checked = 1;
+		};
+		if (my_params.tech == "FALSE") {
+			document.querySelector('input[name=tech]').checked = 1;
+		};
+
+		function getData(callbackFunc){
+			Papa.parse("data.csv", {
+				download: true,
+				header: true,
+				complete: function(results) {
+					callbackFunc(results.data);
+					}
+				}
+			);
+		};
+
+		getData( function(csvdata){
+			csvdata = csvdata.filter( d => (d.north === "TRUE" && my_params.north === "TRUE") || (d.west === "TRUE" && my_params.west === "TRUE") || (d.side === "TRUE" && my_params.side === "TRUE") || (d.main === "TRUE" && my_params.main === "TRUE") || (d.east === "TRUE" && my_params.east === "TRUE") || (d.tech === "TRUE" && my_params.tech === "TRUE"));
+			var img_cnt = csvdata.length;
+			var rand_num = Math.floor(Math.random() * (img_cnt));
+			var img = document.getElementById("myImg");
+			img.setAttribute('src',csvdata[rand_num].imgs);
+			var foodname = document.getElementById('food_name');
+			foodname.innerHTML = csvdata[rand_num].foodnames;
+
+			var container = document.getElementById('map');
+			var options = {
+				center: new kakao.maps.LatLng(
+					parseFloat(csvdata[rand_num].lat),
+					parseFloat(csvdata[rand_num].lon)),
+				 level: 3
+			};
+			var map = new kakao.maps.Map(container, options);
+			var markerPosition  = new kakao.maps.LatLng(
+					parseFloat(csvdata[rand_num].lat),
+					parseFloat(csvdata[rand_num].lon));
+			var marker = new kakao.maps.Marker({
+				position: markerPosition
+			});
+			marker.setMap(map);
+		});
+	</script>
+
+	<a href="../privacy_policy.html" style="text-align: right; color: gray; font-size: 0.3em">개인정보처리방침</a>
+
+	</body>
+</html>
