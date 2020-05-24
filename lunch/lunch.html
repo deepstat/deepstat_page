@@ -83,23 +83,32 @@
 
 		var my_params=getUrlParams()
 
-		if (typeof my_params.north === "undefined"){
+		if ((typeof my_params.north === "undefined") && (typeof my_params.west === "undefined") && (typeof my_params.side === "undefined") && (typeof my_params.main === "undefined") && (typeof my_params.east === "undefined") && (typeof my_params.tech === "undefined")){
 			my_params.north="F";
-		};
-		if (typeof my_params.west === "undefined"){
 			my_params.west="F";
-		};
-		if (typeof my_params.side === "undefined"){
 			my_params.side="F";
-		};
-		if (typeof my_params.main === "undefined"){
 			my_params.main="F";
-		};
-		if (typeof my_params.east === "undefined"){
 			my_params.east="F";
-		};
-		if (typeof my_params.tech === "undefined"){
 			my_params.tech="F";
+		} else {
+			if (typeof my_params.north === "undefined"){
+				my_params.north="F";
+			};
+			if (typeof my_params.west === "undefined"){
+				my_params.west="F";
+			};
+			if (typeof my_params.side === "undefined"){
+				my_params.side="F";
+			};
+			if (typeof my_params.main === "undefined"){
+				my_params.main="F";
+			};
+			if (typeof my_params.east === "undefined"){
+				my_params.east="F";
+			};
+			if (typeof my_params.tech === "undefined"){
+				my_params.tech="F";
+			};
 		};
 
 		if (my_params.north == "T") {
