@@ -22,27 +22,27 @@
     		<div class="gate">
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="north" id="north" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="north" id="north" style="float:right;" value="T"></input>
 			<label for="north">북문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="west" id="west" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="west" id="west" style="float:right;" value="T"></input>
 			<label for="west">서문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="side" id="side" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="side" id="side" style="float:right;" value="T"></input>
 			<label for="side">쪽문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="main" id="main" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="main" id="main" style="float:right;" value="T"></input>
 			<label for="main">정문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="east" id="east" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="east" id="east" style="float:right;" value="T"></input>
 			<label for="east">동문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="tech" id="tech" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="tech" id="tech" style="float:right;" value="T"></input>
 			<label for="tech">텤문</label>
 		</div>
 	</div>
@@ -84,40 +84,40 @@
 		var my_params=getUrlParams()
 
 		if (typeof my_params.north === "undefined"){
-			my_params.north="TRUE";
+			my_params.north="F";
 		};
 		if (typeof my_params.west === "undefined"){
-			my_params.west="TRUE";
+			my_params.west="F";
 		};
 		if (typeof my_params.side === "undefined"){
-			my_params.side="TRUE";
+			my_params.side="F";
 		};
 		if (typeof my_params.main === "undefined"){
-			my_params.main="TRUE";
+			my_params.main="F";
 		};
 		if (typeof my_params.east === "undefined"){
-			my_params.east="TRUE";
+			my_params.east="F";
 		};
 		if (typeof my_params.tech === "undefined"){
-			my_params.tech="TRUE";
+			my_params.tech="F";
 		};
 
-		if (my_params.north == "FALSE") {
+		if (my_params.north == "T") {
 			document.querySelector('input[name=north]').checked = 1;
 		};
-		if (my_params.west == "FALSE") {
+		if (my_params.west == "T") {
 			document.querySelector('input[name=west]').checked = 1;
 		};
-		if (my_params.side == "FALSE") {
+		if (my_params.side == "T") {
 			document.querySelector('input[name=side]').checked = 1;
 		};
-		if (my_params.main == "FALSE") {
+		if (my_params.main == "T") {
 			document.querySelector('input[name=main]').checked = 1;
 		};
-		if (my_params.east == "FALSE") {
+		if (my_params.east == "T") {
 			document.querySelector('input[name=east]').checked = 1;
 		};
-		if (my_params.tech == "FALSE") {
+		if (my_params.tech == "T") {
 			document.querySelector('input[name=tech]').checked = 1;
 		};
 
@@ -133,7 +133,7 @@
 		};
 
 		getData( function(csvdata){
-			csvdata = csvdata.filter( d => (d.north === "TRUE" && my_params.north === "TRUE") || (d.west === "TRUE" && my_params.west === "TRUE") || (d.side === "TRUE" && my_params.side === "TRUE") || (d.main === "TRUE" && my_params.main === "TRUE") || (d.east === "TRUE" && my_params.east === "TRUE") || (d.tech === "TRUE" && my_params.tech === "TRUE"));
+			csvdata = csvdata.filter( d => (d.north === "T" && my_params.north === "T") || (d.west === "T" && my_params.west === "T") || (d.side === "T" && my_params.side === "T") || (d.main === "T" && my_params.main === "T") || (d.east === "T" && my_params.east === "T") || (d.tech === "T" && my_params.tech === "T"));
 			var img_cnt = csvdata.length;
 			var rand_num = Math.floor(Math.random() * (img_cnt));
 			var img = document.getElementById("myImg");

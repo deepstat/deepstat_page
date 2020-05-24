@@ -28,27 +28,27 @@
 	    	<div class="gate">
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="north" id="north" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="north" id="north" style="float:right;" value="T"></input>
 			<label for="north">북문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="west" id="west" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="west" id="west" style="float:right;" value="T"></input>
 			<label for="west">서문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="side" id="side" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="side" id="side" style="float:right;" value="T"></input>
 			<label for="side">쪽문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="main" id="main" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="main" id="main" style="float:right;" value="T"></input>
 			<label for="main">정문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="east" id="east" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="east" id="east" style="float:right;" value="T"></input>
 			<label for="east">동문</label>
 		</div>
 		<div class="gate">
-			<input type="checkbox" name="tech" id="tech" style="float:right;" value="FALSE"></input>
+			<input type="checkbox" name="tech" id="tech" style="float:right;" value="T"></input>
 			<label for="tech">텤문</label>
 		</div>
 	</div>
@@ -61,54 +61,6 @@
 		</center>
 	</div>
 	</form>
-
-	<script>
-		function getUrlParams() {
-			var params = {};
-			window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
-			return params;
-		};
-
-		var my_params=getUrlParams()
-
-		if (typeof my_params.north === "undefined"){
-			my_params.north="TRUE";
-		};
-		if (typeof my_params.west === "undefined"){
-			my_params.west="TRUE";
-		};
-		if (typeof my_params.side === "undefined"){
-			my_params.side="TRUE";
-		};
-		if (typeof my_params.main === "undefined"){
-			my_params.main="TRUE";
-		};
-		if (typeof my_params.east === "undefined"){
-			my_params.east="TRUE";
-		};
-		if (typeof my_params.tech === "undefined"){
-			my_params.tech="TRUE";
-		};
-
-		if (my_params.north == "FALSE") {
-			document.querySelector('input[name=north]').checked = 1;
-		};
-		if (my_params.west == "FALSE") {
-			document.querySelector('input[name=west]').checked = 1;
-		};
-		if (my_params.side == "FALSE") {
-			document.querySelector('input[name=side]').checked = 1;
-		};
-		if (my_params.main == "FALSE") {
-			document.querySelector('input[name=main]').checked = 1;
-		};
-		if (my_params.east == "FALSE") {
-			document.querySelector('input[name=east]').checked = 1;
-		};
-		if (my_params.tech == "FALSE") {
-			document.querySelector('input[name=tech]').checked = 1;
-		};
-	</script>
 
 	<a href="./privacy_policy.html" style="text-align: right; color: gray; font-size: 0.3em">개인정보처리방침</a>
 
