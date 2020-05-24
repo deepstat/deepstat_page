@@ -84,12 +84,12 @@
 		var my_params=getUrlParams()
 
 		if ((typeof my_params.north === "undefined") && (typeof my_params.west === "undefined") && (typeof my_params.side === "undefined") && (typeof my_params.main === "undefined") && (typeof my_params.east === "undefined") && (typeof my_params.tech === "undefined")){
-			my_params.north="F";
-			my_params.west="F";
-			my_params.side="F";
-			my_params.main="F";
-			my_params.east="F";
-			my_params.tech="F";
+			my_params.north="T";
+			my_params.west="T";
+			my_params.side="T";
+			my_params.main="T";
+			my_params.east="T";
+			my_params.tech="T";
 		} else {
 			if (typeof my_params.north === "undefined"){
 				my_params.north="F";
